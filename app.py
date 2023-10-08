@@ -9,7 +9,7 @@ from utils import feat_eng, ML_model, select_target_var
 st.set_page_config(layout="wide")
 st.header('The End-to-End Machine Learning')
 
-tab1, tab2, tab3, tab4 = st.tabs(['Import data','Data Exploration','Data cleaning and feature engineering','Model training and evaluation'])
+tab1, tab2, tab2, tab3, tab4 = st.tabs(['Import data','Clarify problem and establish metrics','Data Exploration','Data cleaning and feature engineering','Model training and evaluation'])
 
 with tab1:
     st.subheader('Please upload the exams csv file to start the procees')
@@ -20,6 +20,33 @@ with tab1:
         st.write(exams)
 
 with tab2:
+    st.subheader('CLARIFY THE PROBLEM AND CONSTRAINTS')
+    st.write("""I aimed at providing valuable insights into student academic 
+    performance across critical domains of mathematics, reading, and writing.
+    Leveraging an extensive dataset encompassing demographic attributes such as 
+    gender, race/ethnicity, parental level of education, and socio-economic 
+    indicators including lunch programs and participation in test preparation
+    courses, my project delves into the intricate web of factors shaping student
+    success. 
+
+    Furthermore, I have developed an intuitive user interface (UI) for data
+    visualization, allowing users to interact with and explore the data
+    effortlessly. Additionally, I created a machine learning to predict
+    student's math, reading, and writing score. Through rigorous analysis and
+    predictive modeling, I strive to empower educational institutions with the
+    knowledge and tools to optimize learning environments and support student on
+    their path to excellence.
+    """)
+
+    st.subheader('ESTABLISH METRICS')
+    st.write("""To assess the performance of student performance prediction model,
+    I will employ several key regression metrics tailored including MAE
+    (Mean Absolute Error), MSE (Mean Squared Error), and R2 to the nature of
+    the task. These metrics will help us gauge the accuracy and precision of our
+    predictions, as well as the overall goodness of fit of the model.
+    """)
+    
+with tab3:
     eda_list = ['Data Overview', 'Visualization']
     col1,col2 = st.columns([2,8])
     EDA = col1.selectbox('Select EDA',eda_list)
@@ -81,7 +108,7 @@ with tab2:
                 hue_ = st.selectbox('Select feature for PairGrid', feature_hue)
             with col5:
                 pair_grid(exams, hue_ = hue_)
-with tab3:
+with tab4:
     col_list = ['gender','race/ethnicity','parental level of education',
             'lunch','test preparation course']
     clean_exams = feat_eng(exams,col_list)
@@ -91,7 +118,7 @@ with tab3:
     st.write(f'Final data shape: {clean_exams.shape}')
     st.dataframe(clean_exams)
 
-with tab4:
+with tab5:
     st.subheader('Use the sidebar to select model, target variable, and other parameters')
     st.sidebar.write('The sidebar area is used to control the model only. It does not affect other tasks')
     # with st.sidebar.header('1. Choose the model'):
