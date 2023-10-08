@@ -9,7 +9,7 @@ from utils import feat_eng, ML_model, select_target_var
 st.set_page_config(layout="wide")
 st.header('The End-to-End Machine Learning')
 
-tab1, tab2, tab2, tab3, tab4 = st.tabs(['Import data','Clarify problem and establish metrics','Data Exploration','Data cleaning and feature engineering','Model training and evaluation'])
+tab1, tab2, tab3, tab4, tab5 = st.tabs(['Import data','Clarify problem and establish metrics','Data Exploration','Data cleaning and feature engineering','Model training and evaluation'])
 
 with tab1:
     st.subheader('Please upload the exams csv file to start the procees')
