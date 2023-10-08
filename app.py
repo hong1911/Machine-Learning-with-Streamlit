@@ -27,9 +27,7 @@ with tab2:
     gender, race/ethnicity, parental level of education, and socio-economic 
     indicators including lunch programs and participation in test preparation
     courses, my project delves into the intricate web of factors shaping student
-    success. 
-
-    Furthermore, I have developed an intuitive user interface (UI) for data
+    success. Furthermore, I have developed an intuitive user interface (UI) for data
     visualization, allowing users to interact with and explore the data
     effortlessly. Additionally, I created a machine learning to predict
     student's math, reading, and writing score. Through rigorous analysis and
