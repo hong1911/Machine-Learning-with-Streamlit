@@ -1,7 +1,6 @@
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-import plotly
 import streamlit as st
 import io
 from utils import check_data, hist_plot, box_plot, heat_map, pair_grid
