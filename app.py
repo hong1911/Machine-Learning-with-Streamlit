@@ -12,12 +12,8 @@ st.header('The End-to-End Machine Learning')
 tab1, tab2, tab3, tab4, tab5 = st.tabs(['Import data','Clarify problem and establish metrics','Data Exploration','Data cleaning and feature engineering','Model training and evaluation'])
 
 with tab1:
-    st.subheader('Please upload the exams csv file to start the procees')
-    uploaded_file = st.file_uploader("Upload the exams file")
-
-    if uploaded_file is not None:
-        exams = pd.read_csv(uploaded_file)
-        st.write(exams)
+    exams = pd.read_csv('exams.csv')
+    st.write(exams)
 
 with tab2:
     st.subheader('CLARIFY THE PROBLEM AND CONSTRAINTS')
