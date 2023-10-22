@@ -1,7 +1,7 @@
 # Machine Learning Deployment on Streamlit Example
 
 This repository provides a simple example of deploying a machine learning model using Streamlit. Streamlit is a Python library that allows you to create web applications for your machine learning models with ease.
-Visit the link to experience the app: https://machine-learning-app.streamlit.app/
+Visit this link to experience the app: https://machine-learning-app.streamlit.app/
 
 ## Project Overview
 
